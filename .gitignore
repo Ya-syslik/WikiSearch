@@ -1,0 +1,22 @@
+# Скомпилированный код и папка сборки Maven
+target/
+*.class
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# NetBeans / OpenIDE
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+# Системные файлы операционных систем
+.DS_Store
+Thumbs.db
