@@ -5,7 +5,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class WikiAPIClient {
+class WikiAPIClient {
     private WikiAPIClient(){}
 
 
@@ -40,7 +40,7 @@ public class WikiAPIClient {
 
             return response.toString();
         }catch (Exception e){
-            throw new RuntimeException();
+            throw new RuntimeException(e);
         }
     }
 
