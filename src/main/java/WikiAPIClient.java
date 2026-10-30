@@ -4,7 +4,6 @@ import java.net.HttpURLConnection;
 
 import java.net.URL;
 import java.net.URLEncoder;
-import java.nio.channels.IllegalChannelGroupException;
 
 public class WikiAPIClient {
     private WikiAPIClient(){}
