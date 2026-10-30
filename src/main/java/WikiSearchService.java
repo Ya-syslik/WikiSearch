@@ -6,8 +6,8 @@ class WikiSearchService {
 
     public static WikiSearchService getInstance(){return Holder.INSTANCE;}
 
-    public List<WikiArticle> executeSearch(String userInput) throws Exception{ //пропускаем исключения
-        String rawJsonResponse=WikiAPIClient.getInstance().fetchRawJSON(userInput);
+    public List<WikiArticle> executeSearch(String userQuery) throws Exception{ //пропускаем исключения
+        String rawJsonResponse=WikiAPIClient.getInstance().fetchRawJSON(userQuery);
         WikiResponseParse parser =new WikiResponseParse();
         WikiResponse parsedJsonResponse=parser.parseJSON(rawJsonResponse);
         return parsedJsonResponse.getQuery().getSearch();
