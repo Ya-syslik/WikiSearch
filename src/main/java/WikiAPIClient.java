@@ -28,6 +28,9 @@ class WikiAPIClient {
             HttpURLConnection httpConnection =(HttpURLConnection) url.openConnection();
             httpConnection.setRequestMethod("GET");//выставляем метод http запроса, GET-получить данные
 
+            httpConnection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
+
+
             StringBuilder response=new StringBuilder();//String неизменяем, поэтому используем StringBuilder чтобы не захломлять память
 
             //принимаем ответ от сервера Википедии
