@@ -4,6 +4,16 @@ import java.util.List;
 public class ConsoleUIService {
     private final Scanner scanner=new Scanner(System.in);
 
+    private ConsoleUIService(){};
+
+    private static class Holder{
+        private static final ConsoleUIService INSTANCE=new ConsoleUIService();
+    }
+
+    public static ConsoleUIService getInstance(){
+        return Holder.INSTANCE;
+    }
+
     public String inputQuery(){
         System.out.println("Введите свой запрос:");
         return scanner.nextLine();
@@ -19,6 +29,7 @@ public class ConsoleUIService {
             System.out.println(articleNumber+". "+a.getTitle());
             articleNumber++;
         }
+        System.out.println("0. Искать другие статьи");
     }
 
     public int inputArticleNumber(int listSize){
